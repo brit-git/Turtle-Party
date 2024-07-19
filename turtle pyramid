@@ -1,0 +1,84 @@
+# by Brittany Wong
+# Turtle is going to build a pyramid!
+
+import turtle
+turtle.shape("turtle")
+turtle.color("green")
+turtle.speed(0)
+turtle.width(2)
+turtle.pencolor("red")
+
+def square(len):
+  for i in range(4):
+    turtle.forward(len)
+    turtle.right(90)
+  return square
+
+def rectangle(width, height):
+  for i in range(2):
+    turtle.forward(width)
+    turtle.right(90)
+    turtle.forward(height)
+    turtle.right(90)
+  return rectangle
+
+turtle.penup()
+turtle.setpos(-195.00,-150.00) # move turtle to bottom left 
+turtle.pendown()
+h = 30
+w = h*2
+def set1(w, h):          # function to draw set of rectangle and square
+  rectangle(w,h)
+  turtle.forward(w)
+  square(h)
+  turtle.forward(h)
+  return set1
+def set2(w,h):          # function to draw set of square and rectangle
+  square(h)
+  turtle.forward(h)
+  rectangle(w,h)
+  turtle.fd(w)
+  return set2
+def up():               # function for turtle to go up
+  turtle.left(90)
+  turtle.fd(h)
+  turtle.right(90)
+  return up
+for j in range(4):      # loop to draw set # of times 
+  set2(w,h)
+square(h)               # single square to finish row
+turtle.bk(h*11)         
+up()
+for j in range(3):      # loop to draw set # of times
+  set2(w,h)
+rectangle(w,h)          # single rectange to finish row
+turtle.bk(h*8)
+up()
+for j in range(3):      # loop to draw set # of times
+  set2(w,h)
+turtle.bk(h*8)
+up()
+for j in range(2):      # loop to draw set # of times
+  set2(w,h)
+square(h)               # single square to finish row
+turtle.bk(h*5)
+up()
+for j in range(1):      # loop to draw set # of times
+  set2(w,h)
+rectangle(w,h)          # single rectangle to finish row
+turtle.bk(h*2)
+up()
+set2(w,h)               # single set for row
+turtle.bk(w)
+up()
+square(h)               # single square to finish pyramid
+turtle.fd(h/2)
+up()                    # climb up flag pole
+up()
+up()
+turtle.speed(3)
+turtle.right(20)        # fly flag
+turtle.fd(50)
+turtle.right(140)
+turtle.fd(50)
+turtle.right(110)       # horray! turtle did it!
