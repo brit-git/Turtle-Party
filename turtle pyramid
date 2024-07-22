@@ -83,3 +83,7 @@ turtle.fd(50)
 turtle.right(140)
 turtle.fd(50)
 turtle.right(110)       # horray! turtle did it!
+
+for i in range(5):    # wheeeeee! happy turtle!
+  turtle.right(360)
+  turtle.left(360)
