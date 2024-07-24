@@ -77,13 +77,18 @@ turtle.fd(h/2)
 up()                    # climb up flag pole
 up()
 up()
-turtle.speed(3)
+turtle.speed(4)
+turtle.fillcolor("red")
+turtle.begin_fill()
 turtle.right(20)        # fly flag
 turtle.fd(50)
 turtle.right(140)
 turtle.fd(50)
 turtle.right(110)       # horray! turtle did it!
+turtle.end_fill()
+turtle.fillcolor("green")
 
-for i in range(5):    # wheeeeee! happy turtle!
+turtle.speed(3)
+for i in range(4):    # wheeeeee! happy turtle!
   turtle.right(360)
   turtle.left(360)
